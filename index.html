@@ -8,10 +8,11 @@
   body {
     font-family: 'Arial', sans-serif;
     text-align: center;
-    background: #fff0f5;
-    color: #d63384;
+    background: #d8a9e2; /* Purple background */
+    color: #6a2c8b;
     margin: 0;
     padding: 0;
+    overflow: hidden;
   }
   .slide {
     display: none;
@@ -23,7 +24,7 @@
     display: block;
   }
   button {
-    background: #d63384;
+    background: #6a2c8b;
     color: white;
     border: none;
     padding: 15px 30px;
@@ -33,14 +34,14 @@
     margin-top: 20px;
   }
   button:hover {
-    background: #b0266c;
+    background: #3e1f5d;
   }
   .question {
     font-size: 20px;
     margin-top: 30px;
   }
   .answer-button {
-    background: #d63384;
+    background: #6a2c8b;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -50,71 +51,55 @@
     margin: 10px;
   }
   .answer-button:hover {
-    background: #b0266c;
+    background: #3e1f5d;
   }
   .message {
     font-size: 22px;
     margin-top: 20px;
     color: #f1a7c7;
   }
-</style>
-</head>
-<body>
-
-<!-- Autoplay YouTube Song (Padaba Taka by DWTA) -->
-<iframe width="0" height="0" src="https://www.youtube.com/embed/4KXI9yYKex0?autoplay=1&loop=1&playlist=4KXI9yYKex0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
-<div class="slide active" id="slide1">
-  <h1>Hi Chingching! 💖</h1>
-  <p>Happy 1st Anniversary! Let’s take a little quiz to celebrate our love! 💕</p>
-  <button onclick="nextSlide()">Start Quiz</button>
-</div>
-
-<div class="slide" id="slide2">
-  <h2 class="question">When did we first meet? 🥰</h2>
-  <button class="answer-button" onclick="showMessage('We met on a beautiful day, and I’m so glad we did! 💖')">Our first date!</button>
-  <button class="answer-button" onclick="showMessage('You’ve always been the one for me! 💕')">In a coffee shop</button>
-  <button class="answer-button" onclick="showMessage('It feels like forever, in the best way! 💞')">At work</button>
-  <div id="message"></div>
-  <button onclick="nextSlide()">Next Question</button>
-</div>
-
-<div class="slide" id="slide3">
-  <h2 class="question">What’s my favorite thing about you? 💕</h2>
-  <button class="answer-button" onclick="showMessage('Your smile, of course! It lights up my world! 😘')">Your smile</button>
-  <button class="answer-button" onclick="showMessage('Your love is everything to me! 💖')">Your kindness</button>
-  <button class="answer-button" onclick="showMessage('How you always make me laugh! 😄')">Your sense of humor</button>
-  <div id="message"></div>
-  <button onclick="nextSlide()">Next Question</button>
-</div>
-
-<div class="slide" id="slide4">
-  <h2 class="question">How do you know I love you? 💖</h2>
-  <button class="answer-button" onclick="showMessage('You can feel it every day. I’m so lucky to have you! 💞')">Because I always show it</button>
-  <button class="answer-button" onclick="showMessage('My heart beats for you, every second! 💕')">Because I tell you every day</button>
-  <button class="answer-button" onclick="showMessage('You’re my everything, and I’ll always love you! 😘')">Because of the way I look at you</button>
-  <div id="message"></div>
-  <button onclick="nextSlide()">Next Question</button>
-</div>
-
-<div class="slide" id="slide5">
-  <h1>HAPPY ANNIVERSARY! 🥰</h1>
-  <p>Hi Chingching! 💖  
-     Happy 1st Anniversary! I’m lucky to have you as my wife. Thank you for always loving me, and here we are celebrating our 1st anniversary and a lifetime to go pa po, bebi. Thank you for always making me happy and sorry po because sometimes we can’t understand each other, but then I’d rather fix everything po kesa po hiwalayan ka, and God knows how lucky I am to have you, baby. HAPPY ANNIVERSARY MAHAL KO, PADABA KO, MOMMY KO, BEBI, BABY, MY WIFE, ASAWA KO 🥺💕</p>
-  <iframe width="0" height="0" src="https://www.youtube.com/embed/4KXI9yYKex0?autoplay=1&loop=1&playlist=4KXI9yYKex0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-</div>
-
-<script>
-  let currentSlide = 1;
-  function nextSlide() {
-    document.getElementById('slide' + currentSlide).classList.remove('active');
-    currentSlide++;
-    document.getElementById('slide' + currentSlide).classList.add('active');
+  .hearts {
+    font-size: 50px;
+    color: #f9b4d1;
+    animation: heartAnimation 1s infinite alternate;
   }
-  function showMessage(msg) {
-    document.getElementById('message').innerText = msg;
+  @keyframes heartAnimation {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.3);
+    }
   }
-</script>
-
-</body>
-</html>
+  .kittens {
+    font-size: 100px;
+    margin: 20px;
+    animation: kittenAnimation 2s infinite alternate;
+  }
+  @keyframes kittenAnimation {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(200px);
+    }
+  }
+  .vintage-paper {
+    background: url('https://cdn.pixabay.com/photo/2017/09/25/11/18/paper-2781786_960_720.jpg');
+    background-size: cover;
+    padding: 20px;
+    border: 2px solid #6a2c8b;
+    border-radius: 10px;
+    font-family: 'Cursive', sans-serif;
+    margin: 30px auto;
+    width: 80%;
+  }
+  .flowers {
+    color: #6a2c8b;
+    font-size: 20px;
+    font-family: 'Comic Sans MS', sans-serif;
+  }
+  .butterfly {
+    position: absolute;
+    width: 80px;
+    heig
